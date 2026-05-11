@@ -17,7 +17,7 @@ const headerHTML = `
 <header>
     <div class="container nav-container">
         <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="Projexel Engineering">
+            <img src="images/logo.png" alt="Projexel Engineering" onerror="this.src='https://placehold.co/200x60?text=PROJEXEL'">
         </a>
 
         <nav class="nav-links">

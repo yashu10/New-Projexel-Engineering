@@ -206,7 +206,9 @@ header {
 }
 
 .logo img {
-    height: 32px;
+    height: 38px;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .nav-links {
