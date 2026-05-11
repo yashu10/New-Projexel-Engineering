@@ -93,10 +93,6 @@ function injectComponents() {
 
     if (headerPlaceholder) {
         headerPlaceholder.innerHTML = headerHTML;
-        // Add overlay div for mobile sidebar
-        const overlay = document.createElement('div');
-        overlay.className = 'nav-overlay';
-        headerPlaceholder.appendChild(overlay);
     }
     if (footerPlaceholder) footerPlaceholder.innerHTML = footerHTML;
 
@@ -113,12 +109,10 @@ function initCommonLogic() {
     // Mobile Menu Toggle (Right Sidebar Slider)
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
-    const overlay = document.querySelector('.nav-overlay');
 
-    if (mobileBtn && navLinks && overlay) {
+    if (mobileBtn && navLinks) {
         function toggleMenu() {
             navLinks.classList.toggle('active');
-            overlay.classList.toggle('active');
             
             // Toggle between menu and x icon if using lucide
             const icon = mobileBtn.querySelector('i');
@@ -134,8 +128,6 @@ function initCommonLogic() {
             toggleMenu();
         });
 
-        overlay.addEventListener('click', toggleMenu);
-
         // Close menu when a link is clicked
         const mobileLinks = navLinks.querySelectorAll('a');
         mobileLinks.forEach(link => {
@@ -146,7 +138,7 @@ function initCommonLogic() {
             });
         });
     }
-
+}
     // Set active nav link based on current URL
     const path = window.location.pathname;
     const page = path.split("/").pop() || 'index.html';

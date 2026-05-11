@@ -896,24 +896,6 @@ footer {
         right: 0;
     }
     
-    .nav-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0,0,0,0.5);
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition);
-        z-index: 1000;
-    }
-    
-    .nav-overlay.active {
-        opacity: 1;
-        visibility: visible;
-    }
-    
     .mobile-menu-btn {
         display: block;
         z-index: 1002;
