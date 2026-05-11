@@ -27,11 +27,11 @@ const headerHTML = `
             <a href="projects.html">Projects</a>
             <a href="clients.html">Clients</a>
             <a href="blog.html">Blog</a>
-            <a href="images/company-profile.pdf" download class="mobile-brochure-link"><i data-lucide="download" style="width: 16px; height: 16px; margin-right: 8px; vertical-align: middle;"></i>Download Brochure</a>
+            <a href="images/company-profile.pdf" target="_blank" rel="noopener noreferrer" class="mobile-brochure-link"><i data-lucide="download" style="width: 16px; height: 16px; margin-right: 8px; vertical-align: middle;"></i>Download Brochure</a>
         </nav>
 
         <div class="header-actions">
-            <a href="images/company-profile.pdf" download class="btn btn-outline brochure-btn"><i data-lucide="download" style="width: 16px; height: 16px; margin-right: 8px; vertical-align: middle;"></i>Brochure</a>
+            <a href="images/company-profile.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline brochure-btn"><i data-lucide="download" style="width: 16px; height: 16px; margin-right: 8px; vertical-align: middle;"></i>Brochure</a>
             <a href="contact.html" class="btn btn-primary top-btn">Contact Us</a>
         </div>
 
