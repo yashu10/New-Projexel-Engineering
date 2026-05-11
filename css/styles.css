@@ -154,13 +154,17 @@ ul {
     height: 16px;
 }
 
-/* Header */
-header {
-    background-color: var(--bg-white);
-    box-shadow: var(--shadow-sm);
+#header-placeholder {
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Header */
+header {
+    background-color: var(--bg-white);
 }
 
 .nav-container {
