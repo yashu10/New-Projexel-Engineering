@@ -36,7 +36,8 @@ const headerHTML = `
         </div>
 
         <button class="mobile-menu-btn">
-            <i data-lucide="menu"></i>
+            <i data-lucide="menu" class="menu-icon"></i>
+            <i data-lucide="x" class="close-icon"></i>
         </button>
     </div>
 </header>
@@ -117,14 +118,7 @@ function initCommonLogic() {
     if (mobileBtn && navLinks) {
         function toggleMenu() {
             navLinks.classList.toggle('active');
-            
-            // Toggle between menu and x icon if using lucide
-            const icon = mobileBtn.querySelector('i');
-            if (icon) {
-                const isOpened = navLinks.classList.contains('active');
-                icon.setAttribute('data-lucide', isOpened ? 'x' : 'menu');
-                lucide.createIcons();
-            }
+            mobileBtn.classList.toggle('active');
         }
 
         mobileBtn.addEventListener('click', (e) => {
