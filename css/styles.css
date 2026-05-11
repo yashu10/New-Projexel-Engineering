@@ -375,19 +375,25 @@ header {
     text-transform: uppercase;
     font-size: 0.9rem;
     color: var(--primary-color);
+    line-height: 1;
 }
 
 .read-more i {
-    width: 18px;
-    height: 18px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: var(--transition);
+    transform: translateY(1px); /* Manual nudge to fix baseline offset */
+}
+
+.read-more i svg {
+    width: 18px;
+    height: 18px;
+    display: block;
 }
 
 .read-more:hover i {
-    transform: translateX(5px);
+    transform: translate(5px, 1px);
 }
 
 /* About Section */
