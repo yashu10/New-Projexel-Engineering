@@ -137,21 +137,20 @@ function initCommonLogic() {
                 }
             });
         });
+            // Set active nav link based on current URL
+        const path = window.location.pathname;
+        const page = path.split("/").pop() || 'index.html';
+        
+        const menuItems = document.querySelectorAll('.nav-links a');
+        menuItems.forEach(item => {
+            const href = item.getAttribute('href');
+            if (href === page) {
+                item.classList.add("active");
+            } else {
+                item.classList.remove("active");
+            }
+        });
     }
-}
-    // Set active nav link based on current URL
-    const path = window.location.pathname;
-    const page = path.split("/").pop() || 'index.html';
-    
-    const menuItems = document.querySelectorAll('.nav-links a');
-    menuItems.forEach(item => {
-        const href = item.getAttribute('href');
-        if (href === page) {
-            item.classList.add("active");
-        } else {
-            item.classList.remove("active");
-        }
-    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
