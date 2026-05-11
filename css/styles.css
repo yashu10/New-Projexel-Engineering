@@ -702,10 +702,9 @@ textarea.form-control {
 
 /* Footer */
 footer {
-    background-color: #ffffff;
-    color: var(--text-color);
+    background-color: var(--secondary-color);
+    color: #a0a0a0;
     padding: 80px 0 30px;
-    border-top: 1px solid #f0f0f0;
 }
 
 .footer-grid {
@@ -716,18 +715,19 @@ footer {
 
 .footer-logo-img {
     height: 60px;
+    filter: brightness(0) invert(1);
 }
 
 .footer-desc {
     margin-top: 20px;
     line-height: 1.6;
-    color: #666;
+    color: #a0a0a0;
     font-size: 0.95rem;
     max-width: 350px;
 }
 
 .footer-heading {
-    color: var(--secondary-color);
+    color: var(--bg-white);
     margin-bottom: 25px;
     font-size: 1.25rem;
     font-weight: 700;
@@ -738,7 +738,7 @@ footer {
 }
 
 .footer-links a {
-    color: #666;
+    color: #a0a0a0;
     transition: var(--transition);
 }
 
@@ -752,14 +752,14 @@ footer {
     display: flex;
     gap: 15px;
     align-items: flex-start;
-    color: #666;
+    color: #a0a0a0;
     font-size: 0.95rem;
 }
 
 .footer-contact-icon {
     width: 20px;
     flex-shrink: 0;
-    color: var(--primary-color);
+    color: white;
     margin-top: 3px;
 }
 
@@ -767,13 +767,13 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #f0f0f0;
+    border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 30px;
     margin-top: 50px;
 }
 
 .footer-bottom p {
-    color: #666;
+    color: #888;
     font-size: 0.9rem;
 }
 
