@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+*.log
+temp_about.html
+fetched_about.html
+fetched_style.css
+.vscode/
+node_modules/
+dist/
+build/

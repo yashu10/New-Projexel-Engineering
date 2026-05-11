@@ -1,0 +1,14 @@
+<svg width="250" height="60" viewBox="0 0 250 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- EPC Loop Symbol -->
+  <path d="M10 30C10 15 25 10 35 15C45 20 50 40 60 45C70 50 85 45 85 30C85 15 70 10 60 15C50 20 45 40 35 45C25 50 10 45 10 30Z" fill="none" stroke="#707A84" stroke-width="4"/>
+  <circle cx="35" cy="30" r="8" fill="#003B5C" />
+  <circle cx="60" cy="30" r="6" fill="#003B5C" />
+  
+  <!-- Text Branding -->
+  <text x="95" y="32" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="24" fill="#003B5C">PROJEXEL</text>
+  <text x="95" y="52" font-family="'Rajdhani', sans-serif" font-weight="300" font-size="16" fill="#707A84" letter-spacing="1">ENGINEERING</text>
+  
+  <!-- "epc" embedded inside loop (stylized) -->
+  <text x="28" y="35" font-family="Arial" font-weight="bold" font-size="10" fill="white">e</text>
+  <text x="56" y="35" font-family="Arial" font-weight="bold" font-size="10" fill="white">p</text>
+</svg>
