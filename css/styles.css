@@ -370,10 +370,24 @@ header {
 .read-more {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.read-more i {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.read-more:hover i {
+    transform: translateX(5px);
 }
 
 /* About Section */
