@@ -27,9 +27,13 @@ const headerHTML = `
             <a href="projects.html">Projects</a>
             <a href="clients.html">Clients</a>
             <a href="blog.html">Blog</a>
+            <a href="#" class="mobile-brochure-link"><i data-lucide="download" style="width: 16px; height: 16px; margin-right: 8px; vertical-align: middle;"></i>Download Brochure</a>
         </nav>
 
-        <a href="contact.html" class="btn btn-primary top-btn">Contact Us</a>
+        <div class="header-actions">
+            <a href="#" class="btn btn-outline brochure-btn"><i data-lucide="download" style="width: 16px; height: 16px; margin-right: 8px; vertical-align: middle;"></i>Brochure</a>
+            <a href="contact.html" class="btn btn-primary top-btn">Contact Us</a>
+        </div>
 
         <button class="mobile-menu-btn">
             <i data-lucide="menu"></i>
