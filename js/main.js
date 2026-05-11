@@ -91,7 +91,13 @@ function injectComponents() {
     const headerPlaceholder = document.querySelector('#header-placeholder');
     const footerPlaceholder = document.querySelector('#footer-placeholder');
 
-    if (headerPlaceholder) headerPlaceholder.innerHTML = headerHTML;
+    if (headerPlaceholder) {
+        headerPlaceholder.innerHTML = headerHTML;
+        // Add overlay div for mobile sidebar
+        const overlay = document.createElement('div');
+        overlay.className = 'nav-overlay';
+        headerPlaceholder.appendChild(overlay);
+    }
     if (footerPlaceholder) footerPlaceholder.innerHTML = footerHTML;
 
     // Re-initialize logic
@@ -104,21 +110,39 @@ function initCommonLogic() {
         lucide.createIcons();
     }
 
-    // Mobile Menu Toggle
+    // Mobile Menu Toggle (Right Sidebar Slider)
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
+    const overlay = document.querySelector('.nav-overlay');
 
-    if (mobileBtn && navLinks) {
+    if (mobileBtn && navLinks && overlay) {
+        function toggleMenu() {
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Toggle between menu and x icon if using lucide
+            const icon = mobileBtn.querySelector('i');
+            if (icon) {
+                const isOpened = navLinks.classList.contains('active');
+                icon.setAttribute('data-lucide', isOpened ? 'x' : 'menu');
+                lucide.createIcons();
+            }
+        }
+
         mobileBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            navLinks.classList.toggle('active');
+            toggleMenu();
         });
+
+        overlay.addEventListener('click', toggleMenu);
 
         // Close menu when a link is clicked
         const mobileLinks = navLinks.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+                if (navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
             });
         });
     }
