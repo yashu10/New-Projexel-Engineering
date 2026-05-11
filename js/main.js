@@ -42,12 +42,12 @@ const footerHTML = `
 <!-- Footer -->
 <footer>
     <div class="container">
-        <div class="footer-grid" style="grid-template-columns: 1.5fr 1fr 1.5fr;">
+        <div class="footer-grid">
             <div>
                 <a href="index.html" class="logo mb-4 d-block">
-                    <img src="images/logo.png" alt="Projexel Engineering" style="height: 50px; filter: brightness(0) invert(1);">
+                    <img src="images/logo.png" alt="Projexel Engineering" class="footer-logo-img">
                 </a>
-                <p style="margin-top: 20px; line-height: 1.6; color: #ccc;">Setting the global benchmark in EPC, E&I, and Industrial Engineering services through an unwavering commitment to quality and execution excellence.</p>
+                <p class="footer-desc">Setting the global benchmark in EPC, E&I, and Industrial Engineering services through an unwavering commitment to quality and execution excellence.</p>
             </div>
             <div>
                 <h4 class="footer-heading">Quick Links</h4>
@@ -61,26 +61,26 @@ const footerHTML = `
             <div>
                 <h4 class="footer-heading">Contact Us</h4>
                 <div class="footer-contact-info">
-                    <p style="margin-bottom: 15px; display: flex; gap: 15px;">
-                        <i data-lucide="map-pin" style="width: 20px; flex-shrink: 0; color: white;"></i>
+                    <p class="footer-contact-item">
+                        <i data-lucide="map-pin" class="footer-contact-icon"></i>
                         <span>1004, Sudarshan Saket, Behind Godrej Garden City, Chainpur Road, Jagatpur, Ahmedabad – 382470</span>
                     </p>
-                    <p style="margin-bottom: 15px; display: flex; gap: 15px; align-items: center;">
-                        <i data-lucide="mail" style="width: 20px; flex-shrink: 0; color: white;"></i>
+                    <p class="footer-contact-item">
+                        <i data-lucide="mail" class="footer-contact-icon"></i>
                         <span>projexel.engr@gmail.com</span>
                     </p>
-                    <p style="display: flex; gap: 15px; align-items: center;">
-                        <i data-lucide="phone" style="width: 20px; flex-shrink: 0; color: white;"></i>
+                    <p class="footer-contact-item">
+                        <i data-lucide="phone" class="footer-contact-icon"></i>
                         <span>+91 80003 69880</span>
                     </p>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; margin-top: 50px;">
+        <div class="footer-bottom">
             <p>&copy; 2026 Projexel Engineering. All rights reserved.</p>
-            <div class="social-links" style="display: flex; gap: 15px;">
-                <a href="#" style="background: #f5f5f5; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #333; transition: 0.3s;"><i class="ri-linkedin-fill"></i></a>
-                <a href="#" style="background: #f5f5f5; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #333; transition: 0.3s;"><i class="ri-twitter-x-fill"></i></a>
+            <div class="social-links">
+                <a href="#"><i class="ri-linkedin-fill"></i></a>
+                <a href="#"><i class="ri-twitter-x-fill"></i></a>
             </div>
         </div>
     </div>
@@ -112,6 +112,14 @@ function initCommonLogic() {
         mobileBtn.addEventListener('click', (e) => {
             e.preventDefault();
             navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const mobileLinks = navLinks.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
         });
     }
 

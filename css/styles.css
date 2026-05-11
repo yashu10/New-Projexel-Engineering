@@ -784,30 +784,33 @@ footer {
 @media (max-width: 992px) {
     .about-grid, .contact-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
     
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 40px;
     }
     
-    .experience-box {
-        right: 0;
-        bottom: 0;
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Add mobile menu JS toggling later */
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         background: var(--bg-white);
         flex-direction: column;
-        padding: 20px;
+        padding: 30px;
         box-shadow: var(--shadow-md);
-        gap: 15px;
+        gap: 20px;
+        text-align: center;
+        z-index: 999;
     }
     
     .nav-links.active {
@@ -817,9 +820,17 @@ footer {
     .mobile-menu-btn {
         display: block;
     }
+
+    .top-btn {
+        display: none;
+    }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
     }
     
     .top-bar {
@@ -827,7 +838,14 @@ footer {
     }
     
     .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
     }
 }
 
