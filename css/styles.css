@@ -452,6 +452,7 @@ header {
     width: 100%;
     height: 240px;
     overflow: hidden;
+    position: relative;
 }
 
 .project-img img {
@@ -459,6 +460,44 @@ header {
     height: 100%;
     object-fit: cover;
     transition: transform 0.8s ease;
+}
+
+.project-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.project-card:hover .project-icon {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.project-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 65, 108, 0.5);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 1;
+}
+
+.project-card:hover .project-img::after {
+    opacity: 1;
 }
 
 .project-card:hover .project-img img {
